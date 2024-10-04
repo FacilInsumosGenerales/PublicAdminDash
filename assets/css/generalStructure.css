@@ -494,6 +494,19 @@ select:disabled {
     padding: 1rem 1rem;
   }
 
+  .tarjeta.row-direction {
+    flex-direction: column;
+  }
+  .info-even-row{
+    flex-direction: column;
+
+  }
+  .card-title-group{
+    flex-direction: column;
+    gap: 15px;  
+
+  }
+
   .admin-tarjetas-grupo {
     display: flex;
     flex-direction: column;
