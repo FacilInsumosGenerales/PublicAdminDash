@@ -152,6 +152,17 @@ p {
   display: flex;
   width: 100%;
   justify-content: space-between;
+ 
+}
+.deck-row-update {
+  border-bottom: 1px solid var(--bs-border-color);
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+ 
 }
 
 .align-right {
@@ -572,9 +583,19 @@ select:disabled {
 .tabulator-row.tabulator-selected {
   background-color: #9abcea !important;
 }
-.fixed-top-margin{
-    margin-top: 80px; 
+
+  .info-r2-container{
+    display: flex;
+    gap: 25px;
+
   }
+
+ .tabulator >:not(caption)>*>* {
+    padding: 0;
+    background-color: white !important ;
+ 
+}
+
 
 /* medium device css code  */
 @media (max-width: 1040px) {
@@ -726,6 +747,23 @@ select:disabled {
     margin: auto;
     width: 100%;
   }
+   .info-r2-container{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+
+  }
+  .page-wraper{
+    position: relative; 
+  }
+  #top-menu.top-menu-sticky{
+    position: fixed !important;
+    top: 0; 
+    padding-right: 95px !important; 
+  }
+  .fixed-top-margin{
+    margin-top: 120px ; 
+  }
 }
 
 /* mobile device  */
@@ -791,4 +829,53 @@ select:disabled {
    
     height: 50vh !important;
 }
+ #top-menu.top-menu-sticky{
+    position: fixed !important;
+    top: 0;
+    padding-right: 20px !important; 
+  }
+
+  #sidebar[aria-expanded="false"] {
+  background-color: var(--bs-primary);
+  padding: 1.5rem;
+  width: fit-content;
+  transition: 300ms ease-in;
+}
+
+#sidebar[aria-expanded="false"] .nav-link {
+  color: #f6f7fb;
+  width: 100%;
+}
+
+#sidebar[aria-expanded="false"] .menu-text {
+  display: block;
+}
+
+#sidebar[aria-expanded="false"] #logo-collapsed {
+  display: none;
+}
+
+#sidebar[aria-expanded="false"] #logo-expanded {
+  display: block;
+}
+
+#sidebar[aria-expanded="false"] ~ #overlay {
+  display: block;
+  background-color: #f6f7fb7e;
+}
+
+.nav-link:hover {
+  background-color: #ffffff;
+}
+
+.nav-link:hover > * {
+  color: var(--bs-primary);
+}
+
+#overlay {
+  position: relative; 
+}
+
+
+
 }
